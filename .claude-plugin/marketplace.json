@@ -1,0 +1,16 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "ainitin-agents",
+  "description": "Nitin's personal Claude Code agents",
+  "owner": {
+    "name": "Nitin Dudhate",
+    "email": "nitindudhate2020@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "ainitin-agents",
+      "description": "AISu product team: PM lead plus 7 specialist subagents",
+      "source": "./plugins/ainitin-agents"
+    }
+  ]
+}
