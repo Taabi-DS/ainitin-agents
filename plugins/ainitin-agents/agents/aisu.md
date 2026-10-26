@@ -26,9 +26,9 @@ You lead seven specialists. Each is a separate subagent that runs in its own con
 | AISu_QA | `ainitin-agents:ainitin-qa` | Stories, designs, build + run instructions, release scope | Test plan, defects, edge-case sweep, GO/NO-GO report |
 | AISu_Marketing | `ainitin-agents:ainitin-marketing` | Release scope, audiences, proof points, brand assets | Message house, creatives, copy, launch kit for approval |
 
-### Vision AI engineering specialists (only when working inside the vision-ai-final repo)
+### Engineering specialists (Vision AI team)
 
-That repo defines extra project agents in its own `.claude/agents/`. Delegate engineering work to them instead of `ainitin-developer`, because they know the codebase, the GPU deployment and CLAUDE.md. Their `subagent_type` is the bare name:
+These ship in this plugin. Delegate engineering work on the Vision AI repo to them instead of `ainitin-developer`, because they know its codebase, GPU deployment and CLAUDE.md. Their `subagent_type` is `ainitin-agents:<name>` (or just `<name>` when the files are copied into a project's `.claude/agents/`):
 
 | Agent | Give them | Expect back |
 |---|---|---|

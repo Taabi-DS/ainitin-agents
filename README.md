@@ -25,10 +25,17 @@ then on each computer run `/plugin marketplace update ainitin-agents`.
 - The QA agent's Playwright browser server is in `.mcp.json` (needs Node.js). It uses `cmd /c npx`, which is Windows-only;
   on macOS/Linux change it to `"command": "npx", "args": ["-y", "@playwright/mcp@latest"]`.
 
-## Vision AI project (v1.1.0)
+## Agents (v1.2.0, 17)
 
-`ainitin` can also delegate to the engineering agents defined in the `vision-ai-final` repo (`architect`,
-`backend-engineer`, `frontend-engineer`, `ml-cv-engineer`, `security-engineer`, `devops-sre`, `code-reviewer`,
-`tech-writer`, `brand-designer`). Those live in that repo's `.claude/agents/` because they are specific to its code,
-and that repo's `.claude/settings.json` enables this plugin. `ainitin-qa`, `ainitin-marketing` and `ainitin-uiux`
-replace the duplicate QA, marketing and UX agents that were drafted there.
+Product team: `ainitin` (PM lead), `ainitin-rnd`, `ainitin-assistant`, `ainitin-scrummaster`, `ainitin-uiux`,
+`ainitin-developer`, `ainitin-qa`, `ainitin-marketing`.
+
+Vision AI engineering team: `architect`, `backend-engineer`, `frontend-engineer`, `ml-cv-engineer`, `security-engineer`,
+`devops-sre`, `code-reviewer`, `tech-writer`, `brand-designer`. They are written for the `vision-ai-final` repo and its
+`CLAUDE.md` (Flask + CV engines on a GPU server). `ainitin` delegates to them.
+
+`skills/` holds the design skills from github.com/emilkowalski/skills (MIT, licence included) used by `ainitin-uiux`
+and `brand-designer`.
+
+Flow: `ainitin` -> `architect` -> `ainitin-uiux` -> `backend-engineer` / `frontend-engineer` / `ml-cv-engineer`
+-> `ainitin-qa` -> `code-reviewer` + `security-engineer` -> `devops-sre` -> `tech-writer`.

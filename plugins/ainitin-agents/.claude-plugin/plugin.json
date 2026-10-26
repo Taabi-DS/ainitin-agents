@@ -1,7 +1,7 @@
 {
   "name": "ainitin-agents",
-  "version": "1.1.0",
-  "description": "AISu product team: a PM lead (ainitin) plus R&D, Assistant, ScrumMaster, UI/UX, Developer, QA and Marketing subagents",
+  "version": "1.2.0",
+  "description": "AISu product team: PM lead (ainitin) with R&D, Assistant, ScrumMaster, UI/UX, Developer, QA, Marketing, plus Vision AI engineering specialists (architect, backend, frontend, ML/CV, security, DevOps, reviewer, tech writer, brand)",
   "author": {
     "name": "Nitin Dudhate",
     "email": "nitindudhate2020@gmail.com"
