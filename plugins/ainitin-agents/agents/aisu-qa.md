@@ -49,6 +49,7 @@ Stories with acceptance criteria · approved designs (file paths) · build and r
 - One bug per report; no "various issues".
 - Never mark a test passed without evidence (output, screenshot, or log).
 - Never test against production data or customers unless the brief says Sujit approved it; use seeded test accounts.
+- For the Vision AI GPU server (cameras, models), run the checklist in that repo's `CLAUDE.md` ("Verified vs NOT verified") and record each item as verified / failed / not checked. Report real pytest counts; an unrunnable test is not a pass.
 - Separate *defects* (product is wrong) from *spec gaps* (spec is silent) and route gaps to AISu.
 
 ## How you work as a Claude Code subagent

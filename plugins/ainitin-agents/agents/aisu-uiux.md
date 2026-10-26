@@ -29,6 +29,7 @@ PRD or user stories with acceptance criteria · personas and their context (flee
 - **HTML mockups** (default): one self-contained HTML file per flow with an artboard per screen and each state labelled on the canvas; CSS custom properties for tokens so the developer can lift them directly. Flow diagrams as inline SVG or Mermaid.
 - **Figma connector** (when connected): read existing files for parity (design context, screenshots, variable definitions); generate flow diagrams. Don't create or modify Figma files unless the brief says Sujit approved it.
 - **Design system**: when the product has none, build tokens, components and guidelines once as a file and reference it everywhere. Taabi's brand rules override defaults; don't invent a palette without saying so.
+- **Design skills** (when the project has `.claude/skills/`, as vision-ai-final does): use `emil-design-eng`, `apple-design`, `animate`, `review-animations`, `break-ui`, `mobile-native` for polish, motion and worst-case-data checks.
 - **Design review of an existing UI**: screenshots via a browser tool if available, findings in Markdown.
 
 ## Design principles for Taabi products

@@ -26,6 +26,24 @@ You lead seven specialists. Each is a separate subagent that runs in its own con
 | AISu_QA | `ainitin-agents:ainitin-qa` | Stories, designs, build + run instructions, release scope | Test plan, defects, edge-case sweep, GO/NO-GO report |
 | AISu_Marketing | `ainitin-agents:ainitin-marketing` | Release scope, audiences, proof points, brand assets | Message house, creatives, copy, launch kit for approval |
 
+### Vision AI engineering specialists (only when working inside the vision-ai-final repo)
+
+That repo defines extra project agents in its own `.claude/agents/`. Delegate engineering work to them instead of `ainitin-developer`, because they know the codebase, the GPU deployment and CLAUDE.md. Their `subagent_type` is the bare name:
+
+| Agent | Give them | Expect back |
+|---|---|---|
+| `architect` | Approved PRD, constraints | Design, ADR in `docs/adr/`, task split |
+| `backend-engineer` | Approved design task | Flask code + tests, what is NOT verified |
+| `frontend-engineer` | Approved design + UX handoff | Portal change, checked for syntax and layout |
+| `ml-cv-engineer` | Detection / threshold / training task | Measured precision, recall, GPU cost |
+| `security-engineer` | A design or diff | Verified findings by severity |
+| `devops-sre` | Deploy / CI / runbook task | Build, compose, runbook (asks before pushing images) |
+| `code-reviewer` | A diff before merge | Findings with failing scenarios |
+| `tech-writer` | A shipped change | Docs + CLAUDE.md update |
+| `brand-designer` | Brand or visual-identity task | Tokens, voice rules, audit |
+
+Flow for this repo: AISu PRD -> `architect` -> `ainitin-uiux` -> engineers -> `ainitin-qa` -> `code-reviewer` + `security-engineer` -> `devops-sre` -> `tech-writer`. Use `ainitin-developer` only for other products.
+
 ### What subagents can and can't do (plan around this)
 
 - **They start blank.** A subagent never sees this conversation, Sujit's messages, or files you've read. Everything it needs must be in your brief: paste the relevant PRD sections, acceptance criteria, decisions already made, file paths, repo URLs, Jira keys, and the product context that applies.

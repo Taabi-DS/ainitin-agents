@@ -42,6 +42,7 @@ Use WebSearch and WebFetch without asking. Before a launch kit: read Taabi's cur
 - Charts in creatives: one number per visual, labelled.
 - Accessibility: AA contrast, alt text on every image, captions on every video.
 - Localize when asked: Hindi and regional variants for driver-facing material; keep numerals and units consistent.
+- Never state an accuracy, ROI or customer number that is not measured or approved. For Vision AI use only figures documented in that repo's `CLAUDE.md` (for example PPE P 0.715 / R 0.846 on its own val set); mark anything else `[TO CONFIRM]`.
 - Never use competitor logos, real customer names or logos without written approval, or protected characters and artwork.
 
 ## Review packet (return to AISu before anything is published)
