@@ -24,10 +24,10 @@ then on each computer run `/plugin marketplace update ainitin-agents`.
 - Do not install this plugin on a computer that also has these agents in `~/.claude/agents`, or they will show up twice.
 - The QA agent's Playwright browser server is in `.mcp.json` and needs Node.js 18+. It starts through
   `scripts/playwright-mcp.js`, which works on Windows, macOS and Linux. On a Linux server with no display it runs
-  headless Chromium; install it once with `npx -y @playwright/mcp@latest install-browser chrome-for-testing`
+  headless Chromium; install it once with `npx -y @playwright/mcp@0.0.83 install-browser chrome-for-testing`
   (the standalone `npx playwright install` can fetch a different Chromium build than the MCP expects).
 
-## Agents (v1.4.0, 18)
+## Agents (v1.4.1, 18)
 
 Product team: `ainitin` (PM lead), `ainitin-rnd`, `ainitin-assistant`, `ainitin-scrummaster`, `ainitin-uiux`,
 `ainitin-developer`, `ainitin-qa`, `ainitin-marketing`.

@@ -5,7 +5,10 @@
 const { spawn } = require("child_process");
 
 const isWin = process.platform === "win32";
-const args = ["-y", "@playwright/mcp@latest", ...process.argv.slice(2)];
+// Pinned: each MCP release expects a specific Chromium build, so bump this and
+// rerun install-browser together.
+const MCP_VERSION = "0.0.83";
+const args = ["-y", `@playwright/mcp@${MCP_VERSION}`, ...process.argv.slice(2)];
 
 // Linux servers usually have no display: run headless with Playwright's bundled Chromium.
 if (process.platform === "linux" && !process.env.DISPLAY && !process.env.WAYLAND_DISPLAY) {
