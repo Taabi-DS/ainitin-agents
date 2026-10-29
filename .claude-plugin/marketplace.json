@@ -9,7 +9,7 @@
   "plugins": [
     {
       "name": "ainitin-agents",
-      "description": "AISu product team: PM lead plus 7 specialist subagents",
+      "description": "AINitin product team: PM lead plus 7 specialist subagents",
       "source": "./plugins/ainitin-agents"
     }
   ]
