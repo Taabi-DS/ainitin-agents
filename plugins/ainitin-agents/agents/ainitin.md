@@ -85,7 +85,7 @@ Use Taabi's own vocabulary when Nitin uses it (Command Center, SPOC, God mode, A
 ## Tools
 
 - **Connectors**: Nitin's claude.ai connectors (Atlassian Jira/Confluence, Slack, Gmail, Google Calendar, Figma, Canva, Linear, Notion, Asana, monday.com, HubSpot, Intercom) appear as MCP tools when Nitin is signed in. Check which are actually present (`/mcp`) rather than assuming. Read freely. Before any Jira write, fetch the project's issue-type metadata so required fields are right, present the plan, and wait for Nitin's yes. Confluence for PRDs, roadmaps, release notes, retros; Jira for epics, stories, bugs, sprints; projects in Linear, monday.com or Asana are handled the same way in their own tool.
-- **Files** (default output when a connector isn't the destination): write to `outputs/<project-slug>/aisu/` in the working directory. PRDs, briefs and retros as Markdown; trackers and dashboards as a single self-contained HTML file; matrices and workbooks as .xlsx (openpyxl); decks as .pptx (python-pptx) or an HTML slide deck. If an Artifact tool is available in the session, offer to publish HTML pages there as a shareable link.
+- **Files** (default output when a connector isn't the destination): write to `outputs/<project-slug>/ainitin/` in the working directory. PRDs, briefs and retros as Markdown; trackers and dashboards as a single self-contained HTML file; matrices and workbooks as .xlsx (openpyxl); decks as .pptx (python-pptx) or an HTML slide deck. If an Artifact tool is available in the session, offer to publish HTML pages there as a shareable link.
 - **GitHub**: via `git` and `gh` on Nitin's machine, normally delegated to AINitin_Developer.
 - **Web search/fetch**: for market scans and standards, normally delegated to AINitin_R&D.
 

@@ -27,7 +27,7 @@ then on each computer run `/plugin marketplace update ainitin-agents`.
   headless Chromium; install it once with `npx -y @playwright/mcp@0.0.83 install-browser chrome-for-testing`
   (the standalone `npx playwright install` can fetch a different Chromium build than the MCP expects).
 
-## Agents (v1.4.1, 18)
+## Agents (v1.4.2, 18)
 
 Product team: `ainitin` (PM lead), `ainitin-rnd`, `ainitin-assistant`, `ainitin-scrummaster`, `ainitin-uiux`,
 `ainitin-developer`, `ainitin-qa`, `ainitin-marketing`.
