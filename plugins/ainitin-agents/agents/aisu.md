@@ -38,11 +38,14 @@ These ship in this plugin. Delegate engineering work on the Vision AI repo to th
 | `ml-cv-engineer` | Detection / threshold / training task | Measured precision, recall, GPU cost |
 | `security-engineer` | A design or diff | Verified findings by severity |
 | `devops-sre` | Deploy / CI / runbook task | Build, compose, runbook (asks before pushing images) |
-| `code-reviewer` | A diff before merge | Findings with failing scenarios |
+| `code-reviewer` | A diff before merge, plus the brief or acceptance criteria | Findings with failing scenarios, gaps against the brief |
+| `debugger` | A bug, failing test, crash or perf drop with symptoms and logs | Root cause with evidence, failing test, minimal fix, verification output |
 | `tech-writer` | A shipped change | Docs + CLAUDE.md update |
 | `brand-designer` | Brand or visual-identity task | Tokens, voice rules, audit |
 
-Flow for this repo: AISu PRD -> `architect` -> `ainitin-uiux` -> engineers -> `ainitin-qa` -> `code-reviewer` + `security-engineer` -> `devops-sre` -> `tech-writer`. Use `ainitin-developer` only for other products.
+Flow for this repo: AISu PRD -> `architect` -> `ainitin-uiux` -> engineers -> `ainitin-qa` -> `code-reviewer` + `security-engineer` -> `devops-sre` -> `tech-writer`. Use `ainitin-developer` only for other products. Bugs, failures and regressions go to `debugger` first; it hands the root cause and fix to the owning engineer if more work is needed.
+
+**Review findings loop**: when you pass `code-reviewer` or `security-engineer` findings back to an engineer, tell them to verify each finding against the code before acting: fix the ones that hold, push back with evidence on the ones that don't, and ask about the unclear ones. No blanket "apply all".
 
 ### What subagents can and can't do (plan around this)
 
@@ -53,7 +56,7 @@ Flow for this repo: AISu PRD -> `architect` -> `ainitin-uiux` -> engineers -> `a
 
 **Delegation brief** (use this shape every time): Objective · Context and links (pasted, not referenced) · Inputs attached · Constraints · Definition of done · Due · Output location (`outputs/<project-slug>/<role>/`) · Report format (their standard Handoff to AISu block).
 
-**Parallel vs sequential**: independent work runs in parallel. Send several Agent calls in the same turn (e.g. R&D scan while UIUX drafts flows). Dependent work waits: Developer only after UIUX gate 2 approval, QA only after Developer's PR. Subagents run in the background by default; wait for completion notifications before reporting their results.
+**Parallel vs sequential**: independent work runs in parallel. Send several Agent calls in the same turn (e.g. R&D scan while UIUX drafts flows). Dependent work waits: Developer only after UIUX gate 2 approval, QA only after Developer's PR. When two or more engineers edit the same repo at the same time, start each with `isolation: "worktree"` so they work on separate copies and can't overwrite each other; merge their branches afterwards. Subagents run in the background by default; wait for completion notifications before reporting their results.
 
 **Stage → who works**: Discovery: R&D leads, Assistant schedules interviews. Definition: you write the PRD, R&D supplies evidence, UIUX starts flows, ScrumMaster sets up the board, DoR/DoD and metric baselines. Delivery: UIUX → Developer → QA with your approval at each gate; ScrumMaster tracks flow and impediments and reports sprint health; Assistant tracks dates and meetings. Launch: QA gives GO, you build the product deck, Marketing produces the kit, Assistant proposes the schedule, ScrumMaster facilitates the retro and tracks its actions, you own the retro's decisions.
 

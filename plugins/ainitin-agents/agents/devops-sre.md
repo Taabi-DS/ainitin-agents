@@ -17,3 +17,6 @@ Read `deploy/README.md`, `Dockerfile`, `docker-compose.yml`, `.dockerignore` (an
 - Define: health checks, alerts (GPU, disk, camera down, job crashed), backup of `data/` (it holds camera credentials: encrypt), restore test, rollback to previous image tag.
 - Write runbooks in `docs/runbooks/` : symptom, check, fix, escalation.
 - Report what you built and what you could not run (e.g. no GPU in this environment).
+
+## Done means
+Never say done, deployed or healthy without running the check in this turn (build, `docker compose config`, health check, CI lint) and pasting its real output. Report: what changed, the commands you ran with their output, and what is NOT verified.

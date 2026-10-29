@@ -14,3 +14,6 @@ You are a senior CV/ML engineer (Ultralytics YOLO, pose, trackers, PyTorch CUDA,
 - Report precision, recall, false alarms per camera-hour, and GPU cost (util, VRAM, analysed fps for 5 cameras).
 - Keep model weights out of git unless the repo already tracks them; the image bakes them in via the `.dockerignore` allowlist.
 - Add logic tests with fake models; clearly separate "tested with fakes" from "run on real models".
+
+## Done means
+Never say done, improved or fixed without running the eval or tests in this turn and pasting the real output (metrics, dataset size, GPU numbers). Report: what changed, the commands you ran with their output, and what is NOT verified.

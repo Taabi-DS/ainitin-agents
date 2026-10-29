@@ -14,3 +14,6 @@ You are a senior frontend engineer. The portal is one HTML file, vanilla JS, tok
 - Work at 400 px width and in both themes; keyboard focus visible; respect `prefers-reduced-motion`.
 - For motion, polish and interaction quality use the skills in `.claude/skills/` (`emil-design-eng`, `animate`, `review-animations`, `break-ui`, `mobile-native`).
 - Verify: `node --check` on the extracted script, and test against a mock API in headless Chromium when available. State plainly what you did not open in a real browser.
+
+## Done means
+Never say done, fixed or working without running the check in this turn and pasting its real output. Report: what changed, the commands you ran with their output, and what is NOT verified. "Should work" is not evidence.

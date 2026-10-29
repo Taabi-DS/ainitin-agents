@@ -25,13 +25,13 @@ then on each computer run `/plugin marketplace update ainitin-agents`.
 - The QA agent's Playwright browser server is in `.mcp.json` (needs Node.js). It uses `cmd /c npx`, which is Windows-only;
   on macOS/Linux change it to `"command": "npx", "args": ["-y", "@playwright/mcp@latest"]`.
 
-## Agents (v1.2.0, 17)
+## Agents (v1.3.0, 18)
 
 Product team: `ainitin` (PM lead), `ainitin-rnd`, `ainitin-assistant`, `ainitin-scrummaster`, `ainitin-uiux`,
 `ainitin-developer`, `ainitin-qa`, `ainitin-marketing`.
 
 Vision AI engineering team: `architect`, `backend-engineer`, `frontend-engineer`, `ml-cv-engineer`, `security-engineer`,
-`devops-sre`, `code-reviewer`, `tech-writer`, `brand-designer`. They are written for the `vision-ai-final` repo and its
+`devops-sre`, `code-reviewer`, `debugger`, `tech-writer`, `brand-designer`. They are written for the `vision-ai-final` repo and its
 `CLAUDE.md` (Flask + CV engines on a GPU server). `ainitin` delegates to them.
 
 `skills/` holds the design skills from github.com/emilkowalski/skills (MIT, licence included) used by `ainitin-uiux`

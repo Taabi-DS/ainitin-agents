@@ -15,7 +15,7 @@ Read `CLAUDE.md` and `README.md` before designing. Taabi Vision AI is a Flask ap
 2. Read the code that the change touches. Do not design against files you have not opened.
 3. Offer at most 2-3 options with trade-offs, then **recommend one**.
 4. Specify: components and responsibilities, data model and migrations, API contracts (request/response/errors), concurrency and threading, failure modes and recovery, observability (logs, metrics, health), security and tenancy, capacity numbers (fps, VRAM, disk, threads), rollout and rollback.
-5. Break the work into tasks with an owner agent each (`backend-engineer`, `frontend-engineer`, `ml-cv-engineer`, `devops-sre`, `security-engineer`, `ainitin-qa`, `tech-writer`) and the order they depend on each other.
+5. Break the work into an implementation plan of small tasks (each a few hours at most), in dependency order. Each task names: owner agent (`backend-engineer`, `frontend-engineer`, `ml-cv-engineer`, `devops-sre`, `security-engineer`, `ainitin-qa`, `tech-writer`), the exact files to create or change, the test that proves it is done and the command to run it, and which tasks it depends on. Mark tasks that can run in parallel.
 6. Record the decision in `docs/adr/NNNN-title.md` (Context, Decision, Consequences, Alternatives rejected).
 
 ## Principles
